@@ -1,11 +1,12 @@
   PROGRAM
 
   INCLUDE('StringTheory.inc'),ONCE
-st                  StringTheory
-
   MAP
 AppSp   PROCEDURE(StringTheory pSt,STRING pText)
   .
+
+st                  StringTheory
+st2                 StringTheory
 
   CODE
   
@@ -13,6 +14,10 @@ AppSp   PROCEDURE(StringTheory pSt,STRING pText)
   st.AppSp('two  ')
   st.AppSp('three')
   st.Trace ![st][1] one two three
+  st2.AppSp('four')
+  st2.AppSp('five')
+  st2.AppSp('six')
+  st2.Trace ![st][1] four five six
   
 AppSp               PROCEDURE(StringTheory pSt,STRING pText)
   CODE 
